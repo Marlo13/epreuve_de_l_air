@@ -1,1 +1,1 @@
-puts "Hello".ss
+print "Hello \n", "Hello"
