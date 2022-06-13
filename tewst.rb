@@ -6,9 +6,9 @@
 # 
 # arr = ["Hello", "HallO", "Regted"]
 
-# #map re map le tableau
-# #select qui permet de selectionner des element de facon booléen
-# #reduc
+# map re map le tableau
+# select qui permet de selectionner des element de facon booléen
+# reduc
 #  arr.map {|string| string.downcase}
 #  [1, 2, 3, 4, 5, 6, 7, 8].select { |n| n % 2 == 0}
 
