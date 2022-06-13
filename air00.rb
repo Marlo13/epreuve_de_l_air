@@ -1,14 +1,5 @@
-
-#recupere le parametre pour la string serparer a chaque espaces
-# def cut_fonction(arr)
-#     for i in arr
-#         d = i.split(' ')
-#         puts d
-#     end
-# end
-
 def cut(cut_string, separator)
-   
+    
     
     cut_string[0].each_line(separator) do |i|
         if i == ' '
@@ -50,4 +41,11 @@ Créez un programme qui découpe une chaîne de caractères en tableau (séparat
     gars
     
     Afficher error et quitter le programme en cas de problèmes d’arguments.
-=end
+    =end
+    #recupere le parametre pour la string serparer a chaque espaces
+    # def cut_fonction(arr)
+    #     for i in arr
+    #         d = i.split(' ')
+    #         puts d
+    #     end
+    # end
