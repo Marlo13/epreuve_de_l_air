@@ -9,6 +9,10 @@ end
 
 #gestiond d'erreur
 (puts "error"; exit) if ARGV[0] == nil
+a = 0
+while a < ARGV.size
+(puts "error" ; exit) if !/\d/.match(ARGV[a])
+a+=1 end
 
 #parsing
 array = ARGV
@@ -27,7 +31,7 @@ result
 =begin Créez un programme qui ajoute à une liste d’entiers triée un nouvel entier tout en gardant la liste triée dans l’ordre croissant. Le dernier argument est l’élément à ajouter.
 
 Utilisez une fonction de ce genre (selon votre langage) :
-sorted_insert(array, new_element) {
+sorted_insert(array, new_element) { 
 	# your algo
 	return (new_array)
 }
