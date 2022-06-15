@@ -15,7 +15,6 @@ def intru(arr)
     puts arr
 end
 
-
 #gestion d'erreur
 (puts "error"; exit) if ARGV[0] == nil
 
@@ -27,7 +26,6 @@ result = intru(arr)
 
 #affichage
 result
-
 
 
 =begin Créez un programme qui retourne la valeur d’une liste qui n’a pas de paire.
