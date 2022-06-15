@@ -16,4 +16,5 @@
 #     lengths[state] = state.length
 #     p lengths
 # end
-#
+# arr.reverse_each {|i| puts i }
+# out put : "Regted", "HallO", "Hello"
