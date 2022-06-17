@@ -16,13 +16,11 @@ sorted_fusion(array1, array2)
 end
 def sorted_fusion(array1, array2) #replacer dans un tableau les nombre trier des deux tableaux
     array3 = []
-    array4 = []
     a = 0
     b = 0
     array3.push(array1, array2)
-    array4 = array3.join(' ')
-    puts     array4.split(' ').sort.join(' ')
-
+    array3 = array3.flatten
+    puts  array3.sort.join(' ')
 end
 #gestion d'erreur
 (puts "error"; exit) if ARGV[0] == nil
