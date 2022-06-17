@@ -17,7 +17,17 @@ end
 def sorted_fusion(array1, array2) #replacer dans un tableau les nombre trier des deux tableaux
     array1.push(array2)
     array1 = array1.flatten
-    puts  array1.sort.join(' ')
+    swapped = true
+        while swapped
+          swapped = false
+          0.upto(array1.size-2) do |i|
+            if array1[i] > array1[i+1]
+              array1[i], array1[i+1] = array1[i+1], array1[i] # swap les valeurs
+              swapped = true
+            end
+          end
+        end
+    puts  array1.join(' ')
 end
 #gestion d'erreur
 (puts "error"; exit) if ARGV[0] == nil
@@ -33,7 +43,7 @@ result
 
 
 
-=begin Créez un programme qui fusionne deux listes d’entiers triées en les gardant triées, les deux listes seront séparées par un “fusion”.
+=begin Créez un programme qui fusionne deux array1es d’entiers triées en les gardant triées, les deux array1es seront séparées par un “fusion”.
 
 Utilisez une fonction de ce genre (selon votre langage) :
 sorted_fusion(array1, array2) {
