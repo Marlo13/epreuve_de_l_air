@@ -16,8 +16,6 @@ sorted_fusion(array1, array2)
 end
 def sorted_fusion(array1, array2) #replacer dans un tableau les nombre trier des deux tableaux
     array3 = []
-    a = 0
-    b = 0
     array3.push(array1, array2)
     array3 = array3.flatten
     puts  array3.sort.join(' ')
