@@ -1,25 +1,21 @@
-def sorted_insert(array, add)
-    for i in 0..array.size-2
-        if array[add].to_i < array[i].to_i
-            array[i], array[add] = array[add], array[i]
+def ma_fonction(array_de_strings, string)
+    for i in 0..array_de_strings.size-2
+        if !array_de_strings[i].downcase.include?(string.downcase)
+            print array_de_strings[i], " "
         end
     end
-    puts  array.join(', ')
+    puts ""
 end
 
-#gestiond d'erreur
+#gestion d'erreur
 (puts "error"; exit) if ARGV[0] == nil
-a = 0
-while a < ARGV.size
-(puts "error" ; exit) if !/\d/.match(ARGV[a])
-a+=1 end
 
 #parsing
-array = ARGV
-last = ARGV.size-1
+arr = ARGV
+cut = ARGV.last
 
 #resolution
-result = sorted_insert(array, last)
+result = ma_fonction(arr,cut)
 
 #affichage
 result
@@ -28,21 +24,22 @@ result
 
 
 
-=begin Créez un programme qui ajoute à une liste d’entiers triée un nouvel entier tout en gardant la liste triée dans l’ordre croissant. Le dernier argument est l’élément à ajouter.
+=begin Créez un programme qui supprime d’un tableau tous les éléments qui ne contiennent pas une autre chaîne de caractères.
 
 Utilisez une fonction de ce genre (selon votre langage) :
-sorted_insert(array, new_element) { 
-	# your algo
-	return (new_array)
+ma_fonction(array_de_strings, string) {
+	# votre algorithme
+	return (nouvel_array_de_strings)
 }
 
 
 Exemples d’utilisation :
-$> ruby exo.rb 1 3 4 2
-1 2 3 4
+$> python exo.py "Michel" "Albert" "Thérèse" "Benoit" "t"
+Michel
 
-$> ruby exo.rb 10 20 30 40 50 60 70 90 33
-10 20 30 33 40 50 60 70 90
+$> python exo.py “Michel” “Albert” “Thérèse” “Benoit” “a”
+Michel, Thérèse, Benoit
+
 
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.

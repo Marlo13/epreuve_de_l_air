@@ -1,45 +1,43 @@
-def ma_fonction(array_de_strings, string)
-    for i in 0..array_de_strings.size-2
-        if !array_de_strings[i].downcase.include?(string.downcase)
-            print array_de_strings[i], " "
-        end
+def for_one(array)
+    l = array.pop
+    l = l.split('')
+    operator = l[0]
+    l = l.drop(1) # unshift(n) pour supprimer n index du tab en comencant par le debut
+    number = l.join('')
+    for i in array
+        i = i.to_i
+        d = i.send(operator.to_sym, number.to_i) #to_sym converti en symbol// send prend i en premier nombre premier parametre l operation et apres le nombre
+        print d," "
     end
-    puts ""
+    puts
 end
 
 #gestion d'erreur
 (puts "error"; exit) if ARGV[0] == nil
-
+a=0
+while a < ARGV.size
+    (puts "error" ; exit) if !/\d/.match(ARGV[a])
+    a+=1 end
 #parsing
-arr = ARGV
-cut = ARGV.last
-
+tableaux = ARGV
 #resolution
-result = ma_fonction(arr,cut)
-
+result = for_one(tableaux)
 #affichage
 result
 
 
-
-
-
-=begin Créez un programme qui supprime d’un tableau tous les éléments qui ne contiennent pas une autre chaîne de caractères.
-
-Utilisez une fonction de ce genre (selon votre langage) :
-ma_fonction(array_de_strings, string) {
-	# votre algorithme
-	return (nouvel_array_de_strings)
-}
+=begin Créez un programme qui est capable de reconnaître et de faire une opération (addition ou soustraction) sur chaque entier d’une liste.
 
 
 Exemples d’utilisation :
-$> python exo.py "Michel" "Albert" "Thérèse" "Benoit" "t"
-Michel
+$> ruby exo.rb 1 2 3 4 5 “+2”
+3 4 5 6 7
 
-$> python exo.py “Michel” “Albert” “Thérèse” “Benoit” “a”
-Michel, Thérèse, Benoit
+$> ruby exo.rb 10 11 12 20 "-5"
+5 6 7 15
 
+
+L’opération à appliquer sera toujours le dernier élément.
 
 
 Afficher error et quitter le programme en cas de problèmes d’arguments.
