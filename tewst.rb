@@ -18,3 +18,9 @@
 # end
 # arr.reverse_each {|i| puts i }
 # out put : "Regted", "HallO", "Hello"
+a1 = []
+a1 = File.expand_path(File.basename(__FILE__))
+a2 = a1.split('/')
+puts a2.last
+
+puts File.dirname(' ')
