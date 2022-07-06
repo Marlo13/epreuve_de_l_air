@@ -31,12 +31,6 @@ result
 
 
 
-
-# afficher espace a decale de fois apres afficher caracter à a.times
-
-
-
-
 =begin Afficher un escalier constitué d’un caractère et d’un nombre d’étages donné en paramètre.
 
 

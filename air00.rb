@@ -49,3 +49,4 @@ Créez un programme qui découpe une chaîne de caractères en tableau (séparat
     #         puts d
     #     end
     # end
+=end
